@@ -32,8 +32,9 @@ export const JourneyPicker = ({ onJourneyChange }) => {
 
   const handleSubmitEvent = (event) => {
       event.preventDefault();
-      console.log('Odesilam formular');
-      console.log(fromCity, toCity, date);
+      fetch(`https://apps.kodim.cz/daweb/leviexpress/api/journey?fromCity=${fromCity}&toCity=${toCity}&date=${date}`)
+        .then((response) => response.json())
+        .then((data) => onJourneyChange(data.results))
   };
 
   const [fromCity, setFromCity] = useState('');
@@ -78,6 +79,7 @@ export const JourneyPicker = ({ onJourneyChange }) => {
               className="btn" 
               type="submit"
               onClick={(event) => handleSubmitEvent(event)}
+              disabled={!fromCity || !toCity || !date ? true : false}
             > 
               Vyhledat spoj
             </button>
