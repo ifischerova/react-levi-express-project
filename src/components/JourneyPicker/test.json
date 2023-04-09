@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "results": [
+    { "code": "NL-AMS", "name": "Amsterdam" },
+    { "code": "SK-BTS", "name": "Bratislava" },
+    { "code": "CZ-BRQ", "name": "Brno" },
+    { "code": "HU-BUD", "name": "Budapest" },
+    { "code": "NL-EIN", "name": "Eindhoven" },
+    { "code": "DE-FRA", "name": "Frankfurt am Main" },
+    { "code": "DE-CGN", "name": "Köln" },
+    { "code": "DE-NUE", "name": "Nürnberg" },
+    { "code": "CZ-PLZ", "name": "Plzeň" },
+    { "code": "CZ-PRG", "name": "Praha" },
+    { "code": "NL-RTM", "name": "Rotterdam" },
+    { "code": "AT-VIE", "name": "Wien" }
+  ]
+}
