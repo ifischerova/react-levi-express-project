@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { JourneyPicker } from '../JourneyPicker';
+import { JourneyDetail } from '../JourneyDetail';
 
 export const Home = () => {
 
@@ -14,7 +15,7 @@ export const Home = () => {
   return (
     <main>
       <JourneyPicker onJourneyChange={handleJourneyChange}/>
-      { journey ? <div>Nalezena cesta s id {journey.journeyId}</div> : null }
+      { journey ? <JourneyDetail journey={ journey }/> : null }
     </main>
   )
 };
