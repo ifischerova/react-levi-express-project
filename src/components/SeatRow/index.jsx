@@ -1,7 +1,7 @@
 import React from "react";
 import { Seat } from "../Seat";
 
-export const SeatRow = ( {row}) => {
+export const SeatRow = ( {row, rowSelectedSeat}) => {
     const testRow = [
         {
           number: 33,
@@ -20,11 +20,12 @@ export const SeatRow = ( {row}) => {
     return (
         <>
          <div className="seat-row">
-            { testRow.map((row) => 
+            { row.map((row) => 
             <Seat 
             number={row.number}
             isOccupied={row.isOccupied}
             key={row.number}
+            isSelected={row.number === rowSelectedSeat ? true : false}
             />
             )}   
          </div>
